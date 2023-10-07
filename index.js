@@ -10,7 +10,9 @@ const app = express();
 app.use(express.json());
 
 app.use("/user", userRoutes);
-
+app.get("/", (req, res) => {
+  res.send("<h1>welcome</h1>");
+});
 connectDB().then(() => {
   app.listen(() => {
     console.log(`server is running`);
