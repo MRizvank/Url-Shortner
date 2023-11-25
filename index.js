@@ -26,7 +26,7 @@ app.get('/:id',async(req,res)=>{
   res.redirect(data.Item.url)
   } catch (error) {
     console.log(error);
-    console.log('oops something went wrong');
+    res.send({"message":'oops something went wrong'});
   }
 })
 
