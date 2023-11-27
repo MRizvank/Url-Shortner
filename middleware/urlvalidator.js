@@ -5,7 +5,7 @@ const validator=(req,res,next)=>{
     if(validity){
         next()
     }else{
-        res.send({"message":"please provide a valid url "})
+        res.staus(400).send({"message":"please provide a valid url "})
     }
 
     
