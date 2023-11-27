@@ -3,8 +3,8 @@ const AWS=require('aws-sdk');
 AWS.config.update({
   region: 
   'ap-south-1',
-  accessKeyId:process.env.AWS_ACCESS_KEY_ID,
-  secretAccessKey:process.env.AWS_SECRET_ACCESS_KEY
+  accessKeyId:process.env.aws_access_key_id,
+  secretAccessKey:process.env.aws_secret_access_key
 })
 const dynamoClient=new AWS.DynamoDB.DocumentClient();
 const TABLE_NAME="Links";
