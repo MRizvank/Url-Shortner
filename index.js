@@ -12,6 +12,13 @@ app.use('/url',ulrRoutes)
 app.get('/',(req,res)=>{
   res.send('<h1>server is running success fully</h1>')
 })
+app.get('/all',async(req,res)=>{
+  const params={
+    TableName:TABLE_NAME
+  }  ;
+  const urls=await dynamoClient.scan(params).promise();
+  res.json(urls)
+})
 
 app.get('/:id',async(req,res)=>{
   const id=req.params.id
