@@ -17,7 +17,7 @@ ulrRoutes.post('/addurl',validator,async(req,res)=>{
           }
             await dynamoClient.put(params).promise();
            res.send({"message":"link shortned  successfully",
-           "shortUrl":`http://localhost:3000/${id}`
+           "shortUrl":`https://talented-shift-deer.cyclic.app/${id}`
         })
     } catch (error) {
         console.log(error);
